@@ -60,7 +60,7 @@ const AIMaturity = () => {
                   transition={{ duration: 0.3 }}
                   className="glass-card p-8 border-secondary/30 bg-secondary/5 relative overflow-hidden h-full min-h-[300px]"
                 >
-                  <div className="absolute -top-10 -right-10 text-[150px] font-bold text-secondary/30 pointer-events-none select-none">
+                  <div className="absolute top-4 right-6 text-[120px] leading-none font-bold text-secondary/20 pointer-events-none select-none">
                     {lvl.level}
                   </div>
                   
