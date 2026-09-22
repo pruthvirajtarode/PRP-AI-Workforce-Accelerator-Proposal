@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #040b16;
+  --color-surface: #0a1628;
+  --color-primary: #0059b3;
+  --color-secondary: #00e5ff;
+  --color-textPrimary: #ffffff;
+  --color-textSecondary: #94a3b8;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-textPrimary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+  }
+  .glow-text {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #040b16; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; 
+}
+
+/* Print specific styles for the report */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+  .glow-text {
+    color: #0059b3 !important;
+    background: none !important;
+    -webkit-text-fill-color: #0059b3 !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+}
