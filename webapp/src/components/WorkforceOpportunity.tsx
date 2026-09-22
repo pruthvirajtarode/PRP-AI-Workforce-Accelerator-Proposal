@@ -42,7 +42,10 @@ const WorkforceOpportunity = () => {
                 ))}
               </ul>
               
-              <button className="mt-auto text-xs font-semibold uppercase tracking-wider text-primary group-hover:text-secondary transition-colors text-left flex items-center">
+              <button 
+                onClick={() => document.getElementById('labs')?.scrollIntoView({ behavior: 'smooth' })}
+                className="mt-auto text-xs font-semibold uppercase tracking-wider text-primary group-hover:text-secondary transition-colors text-left flex items-center"
+              >
                 Explore Scenarios <span className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </button>
             </motion.div>
