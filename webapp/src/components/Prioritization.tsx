@@ -52,7 +52,7 @@ const Prioritization = () => {
             IMPLEMENTATION COMPLEXITY →
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 aspect-square max-h-[800px] w-full max-w-[800px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 w-full max-w-[800px] mx-auto">
             
             {/* Top Left: Quick Wins (High Value, Low Complexity) */}
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className={`p-6 rounded-xl border ${quadrants[0].color} flex flex-col h-full`}>

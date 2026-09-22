@@ -12,7 +12,12 @@ const KPIDashboard = () => {
           </div>
           <div className="mt-4 md:mt-0 flex space-x-2">
             <div className="px-3 py-1 bg-surface border border-white/10 rounded-md text-xs font-medium text-white">Q3 2026</div>
-            <div className="px-3 py-1 bg-primary/20 border border-primary/50 rounded-md text-xs font-medium text-primary">Export CSV</div>
+            <button 
+              onClick={() => alert("This is an illustrative dashboard. Live CSV export functionality will be connected to your active data post-discovery.")}
+              className="px-3 py-1 bg-primary/20 hover:bg-primary/40 transition-colors border border-primary/50 rounded-md text-xs font-medium text-primary cursor-pointer"
+            >
+              Export CSV
+            </button>
           </div>
         </div>
 
