@@ -23,6 +23,7 @@ import Discovery from './components/Discovery';
 import DiscoveryQuestions from './components/DiscoveryQuestions';
 import NextSteps from './components/NextSteps';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <DiscoveryQuestions />
         <NextSteps />
       </main>
+      <ScrollToTop />
       <Footer />
     </div>
   );

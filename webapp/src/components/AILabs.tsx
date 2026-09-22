@@ -27,11 +27,11 @@ const AILabs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-card overflow-hidden transition-all duration-300 ${activeLab === lab.id ? 'ring-1 ring-secondary shadow-[0_0_20px_rgba(0,229,255,0.15)]' : ''}`}
+              className={`glass-card overflow-hidden flex flex-col transition-all duration-300 ${activeLab === lab.id ? 'ring-1 ring-secondary shadow-[0_0_20px_rgba(0,229,255,0.15)]' : ''} h-full`}
             >
               <button 
                 onClick={() => setActiveLab(activeLab === lab.id ? null : lab.id)}
-                className="w-full text-left p-6 flex flex-col h-full focus:outline-none"
+                className="w-full text-left p-6 flex flex-col flex-grow focus:outline-none"
               >
                 <span className="text-secondary font-mono text-sm mb-3">LAB {lab.id}</span>
                 <h3 className="text-xl font-bold text-white mb-2 leading-tight">{lab.title}</h3>
