@@ -28,7 +28,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <img src={logo} alt="PRP Services" className="h-10 object-contain mr-3" />
+            <div className="bg-white px-2 py-1 rounded mr-3 flex items-center justify-center">
+              <img src={logo} alt="PRP Services" className="h-8 object-contain" />
+            </div>
             <div className="text-xl font-bold tracking-tight">
               AI <span className="glow-text">Workforce</span>
             </div>

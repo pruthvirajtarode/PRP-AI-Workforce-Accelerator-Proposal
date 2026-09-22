@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 text-center md:text-left flex flex-col items-center md:items-start">
-            <img src={logo} alt="PRP Services" className="h-12 object-contain mb-4" />
+            <div className="bg-white px-3 py-2 rounded-lg mb-4 flex items-center justify-center inline-block">
+              <img src={logo} alt="PRP Services" className="h-10 object-contain" />
+            </div>
             <div className="text-xl font-bold tracking-tight mb-2">
               AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Workforce</span>
             </div>
