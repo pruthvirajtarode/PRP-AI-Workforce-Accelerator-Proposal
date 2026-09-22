@@ -2,6 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const KPIDashboard = () => {
+  const handleExportCSV = () => {
+    const csvContent = "data:text/csv;charset=utf-8," + 
+      "Metric,Value\n" +
+      "Employees Trained,TBD\n" +
+      "AI Adoption Rate,TBD\n" +
+      "Workflows Created,TBD\n" +
+      "Est. Time Saved (hrs),TBD\n" +
+      "Use Cases Live,TBD\n" +
+      "Competency Avg,TBD\n";
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "prp_ai_roi_dashboard.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="py-24 bg-surface/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +31,7 @@ const KPIDashboard = () => {
           <div className="mt-4 md:mt-0 flex space-x-2">
             <div className="px-3 py-1 bg-surface border border-white/10 rounded-md text-xs font-medium text-white">Q3 2026</div>
             <button 
-              onClick={() => alert("This is an illustrative dashboard. Live CSV export functionality will be connected to your active data post-discovery.")}
+              onClick={handleExportCSV}
               className="px-3 py-1 bg-primary/20 hover:bg-primary/40 transition-colors border border-primary/50 rounded-md text-xs font-medium text-primary cursor-pointer"
             >
               Export CSV
@@ -47,7 +65,7 @@ const KPIDashboard = () => {
             <div className="lg:col-span-2 p-6 bg-background border border-white/5 rounded-lg flex flex-col">
               <h3 className="text-sm font-bold text-white mb-6">AI Competency: Pre vs Post Training</h3>
               <div className="flex-grow flex items-end justify-around h-48 pb-2 border-b border-white/10">
-                <div className="w-16 bg-white/5 rounded-t-sm h-1/3 relative group">
+                <div className="w-16 bg-white/30 rounded-t-sm h-1/3 relative group">
                   <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs text-textSecondary opacity-0 group-hover:opacity-100 transition-opacity">Baseline</div>
                 </div>
                 <div className="w-16 bg-primary/80 rounded-t-sm h-4/5 relative group">
